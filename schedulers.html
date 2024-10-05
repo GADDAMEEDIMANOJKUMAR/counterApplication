@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            text-align: center;
+        }
+        button{
+            margin:10px;
+            background-color: rgb(194, 47, 194);
+            padding: 10px;
+            border-width: 0px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+        button:hover{
+            object-fit: cover;
+            transition: transform 0.99s;
+            transform: scale(1.5);
+        }
+        h1{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 id="timer">0</h1>
+        <div>
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <!-- <button id ="reset">Reset</button> -->
+        </div>
+    </div>
+    <script>
+        let timerEl = document.getElementById("timer")
+        let startEl = document.getElementById("start")
+        let stopEl = document.getElementById("stop")
+        // let resetEl = document.getElementById("reset")
+      
+        // setInterval and clear interval methods
+        let count = 0
+        startEl.addEventListener("click", start)
+
+        let id;
+        function start(){
+            id = setInterval(()=>{
+            timerEl.innerHTML = count++
+            },1000)
+        }
+       
+        stopEl.addEventListener("click", ()=>{
+            clearInterval(id)
+        })
+
+        // setTimeout and clear TimeOut methods
+        let time;
+        time = setTimeout(()=>{
+                alert("Time over manoj")
+        },3000)
+        
+        clearTimeout(time)
+
+        function sum_of(){
+             console.log(this)
+        }
+        sum_of()
+
+    </script>
+</body>
+</html>

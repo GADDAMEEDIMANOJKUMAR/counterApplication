@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(rgb(128, 117, 197),rgb(45, 178, 214));
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.left-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+
+}
+.left-card h1{
+    font-weight: 500;
+}
+.left-card hr{
+    border: none;
+    border: 3px solid rgb(207, 65, 186);
+    width: 170px;
+    border-radius: 10px;
+
+}
+.left-card input,textarea{
+    height: 40px;
+    width: 280px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border-width: 0px;
+    cursor: pointer;
+    outline: none;
+}
+.left-card textarea{
+    height: 60px;
+}
+
+.left-card input:focus,textarea:focus{
+    border: 3px solid violet;
+}
+
+.left-card button{
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 10px 10px;
+    border: 0px;
+   font-weight:bold;
+   font-size: 15px;
+    border-radius: 10px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+

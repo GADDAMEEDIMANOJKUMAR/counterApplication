@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family:sans-serif;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Dark Theme</h1>
+    <div>
+    <button onclick="darkTheme()">Dark Theme</button>
+    <button onclick="normalTheme()">Normal Mode</button>
+    </div> -->
+
+    <div>
+        <h1>background colors</h1>
+        <div>
+        <input type="color" id = "input_id">
+        <input type="text" id = "input_id_1">
+        </div>
+        <button onclick="changeColor()">generate</button>
+    </div>
+    <script>
+        // function darkTheme() {
+        //     document.body.style.backgroundColor = "black"
+        //     document.body.style.color = "white"
+        // }
+        // function normalTheme(){
+        //     document.body.style.backgroundColor = "white"
+        //     document.body.style.color = "black" 
+        // }
+
+
+        function changeColor(){
+            let first_color = document.getElementById("input_id")
+            let second_color = documennt.getElementById("input_id_1")
+
+            document.body.style.backgroundImage = `linear-gradient(${toright},${first_color.value}, ${second_color.value})`
+        }
+    </script>
+</body>
+</html>

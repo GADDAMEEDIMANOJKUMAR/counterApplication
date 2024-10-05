@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            font-family: sans-serif;
+            font-weight: 300;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+
+        }
+        .grey{
+            background-color: rgb(57, 50, 50);
+            
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            height: auto;
+            width: auto;
+            padding: 10px;
+            border-width: 0px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-image: linear-gradient(red,orange);
+            position: relative;
+            animation: reverse;
+            font-weight: bold;
+            color: black;
+            height: 55px;
+            width: 105px;
+        }
+        .inpt{
+            height:auto;
+            width:auto;
+            margin: 10px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="card" id ="card" >
+        <div>
+            <button class="btn" id="btn"> Dark mode</button>
+       </div>
+        <h1 class="head" id="head">My name is manoj kumar <br> Iam from kadapa, Andhra pradesh. <br> 
+         I completed my graduation bsc computer science <br>
+         i have hands on experience with technologies like Html,css,javscript. <br>
+         I develop many rojects static and Dynamic websites</h1>
+            <input type="text" class="inpt" id="inpt">
+          
+    </div>
+<script>
+    let headEl = document.getElementById("head")
+    let btnEl  = document.getElementById("btn")
+    let cardEl = document.getElementById("card")
+    let inptEl = document.getElementById("inpt")
+  
+
+    btnEl.addEventListener("click", () =>{
+        cardEl.classList.toggle("dark");
+    })
+
+    btnEl.addEventListener("mouseout", ()=>{
+        // cardEl.classList.toggle("dark");
+        btnEl.innerHTML = "Dark mode"
+    })
+
+    btnEl.addEventListener("mouseover", () =>{
+        btnEl.innerHTML = "Light mode"
+        // cardEl.classList.toggle("dark");
+    })
+
+    // cardEl.addEventListener("keypress", (e)=>{
+    //     if (e.keyCode == 32) {
+    //         cardEl.classList.toggle("dark");
+    //         // console.log("enter")
+    //     }
+    //     else if (e.keyCode == 13){
+    //         cardEl.classList.toggle("grey")
+    //     }
+
+    // })
+
+    inptEl.addEventListener("change", (e)=>{
+        // console.log(e.target.value);
+        let head = document.createElement("h1")
+        head.style.color = "yellow"
+        cardEl.appendChild(head)
+        if (e.value = 32){
+            head.innerHTML = e.target.value
+            inptEl.value = ""
+        }
+    })
+
+</script>
+</body>
+</html>

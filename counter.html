@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Application</title>
+    <style>
+        .head{
+            text-align: center;
+        }
+        .btn{
+            height: auto;
+            width: 50px;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            margin-left: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: rgb(90, 90, 225);
+
+        }
+        .btn:hover {
+            background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
+            color: #fff;
+            transform: translateY(-30%);
+        }
+        .btn1{
+            height: 50px;
+            width: 90px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Courier New', Courier;
+            background-color: black;
+            color: #fff;
+        }
+        .btn1:hover {
+            background-image: linear-gradient(to bottom, #cd384f, #d77786);
+            color: #fff;
+            transform: translateY(-30%);
+        }
+        #text{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id ="card">
+        <h1 class="head">COUNTER APPLIATION</h1>
+        <div class="container">
+        <h1 id="text">0</h1>
+        <div class="btn-card">
+            <button class="btn" id="+"> + </button>
+            <button class="btn btn1" id="reset">Reset</button>
+            <button class="btn" id="-"> - </button>
+        </div>
+        </div>
+    </div>
+    <script>
+        let textEl = document.getElementById("text");
+        let increEl = document.getElementById("+");
+        let decreEl = document.getElementById("-");
+        let resetEl = document.getElementById("reset")
+        let headEl = document.getElementsByClassName("head");
+        let count = 0
+
+        // if (count > 0){
+        //     document.body.style.backgroundColor ="lightgreen"
+        // }
+        // else if (count < 0){
+        //     document.body.style.backgroundColor ="red" 
+        // }
+
+        increEl.addEventListener("click", () =>{
+            textEl.innerHTML = count++;
+
+           if (count > 0){
+            document.body.style.backgroundColor ="lightgreen"
+        }
+         
+        });
+
+        decreEl.addEventListener("click",() =>{
+            textEl.innerHTML = count--;
+            
+            if (count < 0){
+            document.body.style.backgroundColor ="red" 
+        }
+
+
+        })
+
+        resetEl.addEventListener("click",()=>{
+            count = 0
+            textEl.innerHTML = count;
+            document.body.style.backgroundColor ="white"
+            
+        })
+
+
+    </script>
+</body>
+</html>

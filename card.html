@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            background-image: linear-gradient(to right,orange,brown,black);
+            height: 350px;
+            width: 550px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .icici-card{
+            display: flex;
+            justify-content: end;
+        }
+        .icici-logo{
+            height: 50px;
+            width: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: transparent;
+        }
+        .chip-logo{
+            height: 50px;
+            width: 80px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .chip-card{
+            display: flex;
+            justify-content: space-between;
+        }
+        .wifi-logo{
+            height: 50px;
+            width: 70px;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        .card-no{
+            color: white;
+            font-size: 30px;
+            margin-left: 40px;
+        }
+        .visa-card{
+            height: 50px;
+            width: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icici-card">
+            <img src="https://res.cloudinary.com/dn0v6bhw1/image/upload/v1723103753/download_wje890.png" alt="icici" class="icici-logo">
+
+        </div>
+        <div class="chip-card">
+            <img src="https://res.cloudinary.com/dn0v6bhw1/image/upload/v1723104418/sim-card-clipart-design-illustration-free-png_lvke5j.webp" alt="chip" class="chip-logo">
+            <img src="https://res.cloudinary.com/dn0v6bhw1/image/upload/v1723101284/png-transparent-wi-fi-symbol-wireless-computer-icons-wifi-computer-network-electronics-internet_yq2tsg.png" alt="wifi" class="wifi-logo">
+        </div>
+
+        <div>
+            <p class="card-no">4315   5112   1443  1773</p>
+            <div style=" display: flex; justify-content: space-evenly; color: white;">
+                <p>4065</p>
+                    <p>VALID FROM <br> 11/20</p>
+                    <p>VALID THRU <br> 10/25</p>
+            </div>
+            <div style="margin-left: 25px; color: white; display: flex; justify-content: space-around; margin-bottom: 30px;">
+                <p style="font-size: 20px;"><b>G MANOJ KUMAR</b></p>
+                <img src="https://res.cloudinary.com/dn0v6bhw1/image/upload/v1723106416/download_2_f1zvb8.png" alt="visa" class="visa-card">
+            </div>
+        </div>
+    </div>
+    <input type="text" id="input_id">
+    <button onclick="colorChange()"> change</button>
+    <script>
+        function colorChange(){
+            let a = document.getElementById("input_id");
+            document.body.style.backgroundColor = a.value
+        }
+
+    </script>
+</body>
+</html>
